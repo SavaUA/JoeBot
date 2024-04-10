@@ -12,4 +12,12 @@ const client = new Client({
 
 client.on('ready', (c) => {console.log('Bot is now running')});
 
+client.on('interactionCreate', (interaction) => {
+    if (!interaction.isChatInputCommand()) return;
+
+    if (interaction.commandName === 'test') {
+        interaction.reply('Hey its me joe');
+    }
+});
+
 client.login(process.env.TOKEN);

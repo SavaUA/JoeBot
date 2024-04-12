@@ -15,7 +15,7 @@ client.on('ready', (c) => {console.log('Bot is now running')});
 client.on('interactionCreate', (interaction) => {
     if (!interaction.isChatInputCommand()) return;
 
-    if (interaction.commandName === 'test') {
+    if (interaction.commandName === 'hey') {
         interaction.reply('Hey its me joe');
     }
 });
